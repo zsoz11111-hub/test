@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="서진성 & 신부이름 결혼합니다">
+    <meta property="og:description" content="2026년 11월 14일, 저희의 시작을 축복해주세요.">
+    <meta property="og:image" content="https://via.placeholder.com/800x400"> <title>모바일 청첩장</title>
+    <style>
+        /* [디자인 설정 영역] */
+        :root {
+            --main-color: #f7cac9; /* 포인트 색상 (분홍) */
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --gray-text: #666666;
+        }
+        
+        * { box-sizing: border-box; }
+        body {
+            margin: 0; padding: 0;
+            font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+            background-color: #f5f5f5;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* 모바일 화면 중앙 정렬 컨테이너 */
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: var(--bg-color);
+            min-height: 100vh;
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+        }
+
+        /* 1. 메인 커버 */
+        .cover {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* 화면 전체 높이 */
+            background-image: url('https://via.placeholder.com/600x900'); /* [수정] 메인 사진 경로 */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding-bottom: 80px;
+            text-align: center;
+            color: #fff;
+            text-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+        }
+        .cover-title { font-size: 1.2rem; letter-spacing: 2px; margin-bottom: 10px; }
+        .cover-names { font-size: 1.8rem; font-weight: bold; margin-bottom: 10px; }
+        .cover-date { font-size: 1.0rem; opacity: 0.9; }
+
+        /* 섹션 공통 */
+        .section { padding: 50px 20px; text-align: center; border-bottom: 1px solid #eee; }
+        .sec-title {
+            color: var(--main-color);
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        /* 2. 초대 문구 */
+        .greeting { font-size: 0.95rem; color: var(--gray-text); line-height: 2.2; margin-bottom: 30px;}
+        .highlight-name { font-weight: bold; color: #000; font-size: 1.1rem; }
+
+        /* 3. 달력 (단순 디자인) */
+        .calendar-box {
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 10px;
+        }
+        .calendar-title { font-size: 1.2rem; margin-bottom: 10px; font-weight: bold;}
+        .d-day { color: var(--main-color); font-weight: bold; margin-bottom: 20px; display: block;}
+
+        /* 4. 갤러리 (그리드) */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3열 배열 */
+            gap: 5px;
+        }
+        .gallery-img {
+            width: 100%;
+            aspect-ratio: 1 / 1; /* 정사각형 비율 */
+            object-fit: cover;
+            background-color: #eee;
+            border-radius: 4px;
+        }
+
+        /* 5. 오시는 길 */
+        .map-buttons { display: flex; gap: 10px; justify-content: center; margin-top: 20px; }
+        .btn {
+            padding: 12px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            flex: 1;
+            text-align: center;
+        }
+        .btn-naver { background-color: #03C75A; color: #fff; }
+        .btn-kakao { background-color: #FEE500; color: #000; }
+
+        /* 6. 마음 전하실 곳 (아코디언) */
+        .account-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: none;
+            border-bottom: 1px solid #eee;
+            text-align: left;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+        .account-info {
+            display: none; /* 숨김 처리 */
+            padding: 20px;
+            background-color: #fff;
+            font-size: 0.9rem;
+            color: #555;
+            text-align: left;
+        }
+        .copy-btn {
+            float: right;
+            background: #eee;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            border: none;
+        }
+
+        /* 푸터 */
+        .footer { padding: 50px 0; background: #eee; color: #999; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="cover">
+        <div class="cover-title">WEDDING INVITATION</div>
+        <div class="cover-names">서진성 & 신부이름</div>
+        <div class="cover-date">2026. 11. 14. SAT PM 12:00</div>
+    </div>
+
+    <div class="section">
+        <div class="sec-title">INVITATION</div>
+        <div class="greeting">
+            서로의 이름을 부르는 것만으로도<br>
+            사랑의 깊이를 알 수 있는 두 사람이<br>
+            꽃과 나무처럼 어우러져<br>
+            아름다운 가정을 이루려 합니다.<br><br>
+            저희의 첫걸음을 함께하시어<br>
+            축복해 주시면 감사하겠습니다.
+        </div>
+        <div>
+            <span class="highlight-name">서진성</span> · <span class="highlight-name">신부이름</span>
+            <span style="font-size:0.9rem; color:#888;">의 결혼식</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="sec-title">DATE & LOCATION</div>
+        <div class="calendar-box">
+            <div class="calendar-title">2026. 11. 14</div>
+            <span class="d-day">토요일 오후 12시</span>
+            <div style="color:#666; font-size:0.9rem;">
+                광주광역시 OO웨딩홀<br>
+                1층 그랜드볼룸
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="sec-title">GALLERY</div>
+        <div class="gallery-grid">
+            <img src="https://via.placeholder.com/300" class="gallery-img">
+            <img src="https://via.placeholder.com/300" class="gallery-img">
+            <img src="https://via.placeholder.com/300" class="gallery-img">
+            <img src="https://via.placeholder.com/300" class="gallery-img">
+            <img src="https://via.placeholder.com/300" class="gallery-img">
+            <img src="https://via.placeholder.com/300" class="gallery-img">
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="sec-title">LOCATION</div>
+        <div style="background:#eee; height:200px; line-height:200px; color:#aaa; margin-bottom:15px;">
+            지도 이미지 영역
+        </div>
+        <div class="map-buttons">
+            <a href="https://map.naver.com" class="btn btn-naver" target="_blank">네이버 지도</a>
+            <a href="https://map.kakao.com" class="btn btn-kakao" target="_blank">카카오맵</a>
+        </div>
+    </div>
+
+    <div class="section" style="background-color:#fafafa;">
+        <div class="sec-title">ACCOUNT</div>
+        
+        <button class="account-btn" onclick="toggleAcc('acc1')">
+            신랑측 계좌번호 <span style="font-size:0.8rem;">▼</span>
+        </button>
+        <div id="acc1" class="account-info">
+            은행명 000-000-000000 (예금주: 서진성)
+            <button class="copy-btn" onclick="copyText('000-000-000000')">복사</button>
+        </div>
+
+        <button class="account-btn" onclick="toggleAcc('acc2')">
+            신부측 계좌번호 <span style="font-size:0.8rem;">▼</span>
+        </button>
+        <div id="acc2" class="account-info">
+            은행명 000-000-000000 (예금주: 신부이름)
+            <button class="copy-btn" onclick="copyText('000-000-000000')">복사</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        Created by Seo Jin-seong
+    </div>
+</div>
+
+<script>
+    // 계좌번호 토글 함수
+    function toggleAcc(id) {
+        var x = document.getElementById(id);
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+
+    // 복사 기능 함수
+    function copyText(val) {
+        navigator.clipboard.writeText(val).then(function() {
+            alert("계좌번호가 복사되었습니다.");
+        });
+    }
+</script>
+
+</body>
+</html>
